@@ -14,190 +14,60 @@
       --line: #d7cdb9;
       --accent: #0d5c63;
       --accent-2: #bf6c52;
-      --accent-3: #dcc8a4;
       --shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(191,108,82,0.12), transparent 32%),
-        radial-gradient(circle at top right, rgba(13,92,99,0.10), transparent 28%),
-        linear-gradient(180deg, #efe7da 0%, var(--bg) 100%);
-      font-family: Georgia, 'Times New Roman', serif;
-      line-height: 1.55;
-    }
+    body { margin: 0; color: var(--ink); background: radial-gradient(circle at top left, rgba(191,108,82,0.12), transparent 32%), radial-gradient(circle at top right, rgba(13,92,99,0.10), transparent 28%), linear-gradient(180deg, #efe7da 0%, var(--bg) 100%); font-family: Georgia, 'Times New Roman', serif; line-height: 1.58; }
     a { color: var(--accent); }
-    .wrap {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 28px 20px 84px;
-    }
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 22px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 20px 84px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 22px; color: var(--muted); font-size: 0.95rem; }
     .topbar a { text-decoration: none; }
-    .hero {
-      background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,253,248,0.96));
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      padding: 34px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: auto -80px -80px auto;
-      width: 220px;
-      height: 220px;
-      background: radial-gradient(circle, rgba(13,92,99,0.12), transparent 68%);
-      pointer-events: none;
-    }
-    .eyebrow {
-      margin: 0 0 14px;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 0.78rem;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(2.5rem, 7vw, 5.1rem);
-      line-height: 0.92;
-      letter-spacing: -0.04em;
-      max-width: 820px;
-    }
-    .lead {
-      max-width: 760px;
-      margin: 20px 0 0;
-      font-size: 1.17rem;
-      color: var(--muted);
-    }
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 11px 16px;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      text-decoration: none;
-      background: white;
-      font-weight: 600;
-      min-width: 140px;
-    }
-    .button.secondary {
-      border-color: var(--line);
-      color: var(--ink);
-    }
-    .highlights {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 28px;
-    }
-    .highlight {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.7);
-      padding: 18px;
-    }
+    .hero { background: linear-gradient(180deg, rgba(255,255,255,0.90), rgba(255,253,248,0.98)); border: 1px solid var(--line); box-shadow: var(--shadow); padding: 36px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; inset: auto -80px -80px auto; width: 240px; height: 240px; background: radial-gradient(circle, rgba(13,92,99,0.12), transparent 68%); pointer-events: none; }
+    .eyebrow { margin: 0 0 14px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem; }
+    h1 { margin: 0; font-size: clamp(2.6rem, 7vw, 5.3rem); line-height: 0.92; letter-spacing: -0.04em; max-width: 860px; }
+    .lead { max-width: 780px; margin: 20px 0 0; font-size: 1.16rem; color: var(--muted); }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; background: white; font-weight: 600; min-width: 140px; }
+    .button.secondary { border-color: var(--line); color: var(--ink); }
+    .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 28px; }
+    .highlight { border: 1px solid var(--line); background: rgba(255,255,255,0.7); padding: 18px; }
     .highlight strong { display: block; margin-bottom: 6px; }
     .section { margin-top: 28px; }
-    .panel {
-      background: rgba(255,253,248,0.98);
-      border: 1px solid var(--line);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.04);
-      padding: 30px;
-    }
-    .section-title {
-      margin: 0 0 16px;
-      font-size: 1.7rem;
-      letter-spacing: -0.03em;
-    }
-    .sublead {
-      color: var(--muted);
-      margin: 0 0 18px;
-      max-width: 760px;
-    }
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .project {
-      border: 1px solid var(--line);
-      padding: 20px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(251,247,240,0.95));
-    }
+    .panel { background: rgba(255,253,248,0.98); border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(0,0,0,0.04); padding: 30px; }
+    .section-title { margin: 0 0 16px; font-size: 1.72rem; letter-spacing: -0.03em; }
+    .sublead { color: var(--muted); margin: 0 0 18px; max-width: 780px; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+    .stat { border: 1px solid var(--line); background: white; padding: 18px; }
+    .stat .value { font-size: 2rem; line-height: 1; margin-bottom: 6px; color: var(--accent); }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .project { border: 1px solid var(--line); padding: 20px; background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(251,247,240,0.95)); }
     .project h3 { margin: 0 0 10px; font-size: 1.22rem; }
-    .label {
-      display: inline-block;
-      font-size: 0.74rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
+    .label { display: inline-block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px; }
     .meta { color: var(--muted); font-size: 0.95rem; }
     .project ul { padding-left: 18px; margin: 12px 0 0; }
     .project li { margin: 8px 0; }
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 18px;
-    }
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-    }
-    .pill {
-      border: 1px solid var(--line);
-      padding: 8px 12px;
-      background: white;
-      font-size: 0.95rem;
-    }
+    .two-col { display: grid; grid-template-columns: 1.06fr 0.94fr; gap: 18px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .pill { border: 1px solid var(--line); padding: 8px 12px; background: white; font-size: 0.95rem; }
     .timeline { margin: 0; padding-left: 18px; }
     .timeline li { margin: 10px 0; }
-    .footer {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: 0.95rem;
-      text-align: center;
-    }
-    @media (max-width: 760px) {
-      .hero, .panel { padding: 22px; }
-      .two-col { grid-template-columns: 1fr; }
-      .topbar { flex-direction: column; align-items: flex-start; }
-    }
+    .footer { margin-top: 28px; color: var(--muted); font-size: 0.95rem; text-align: center; }
+    @media (max-width: 760px) { .hero, .panel { padding: 22px; } .two-col { grid-template-columns: 1fr; } .topbar { flex-direction: column; align-items: flex-start; } }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="topbar">
-      <div>Adam Tregale · Exeter, Devon · AI automation and workflow engineering</div>
+      <div>Adam Tregale · Exeter, Devon · AI automation, knowledge systems, workflow engineering</div>
       <div><a href="https://www.linkedin.com/in/adam-t-724315133/">LinkedIn</a> · <a href="https://github.com/after-magic">GitHub</a></div>
     </div>
 
     <section class="hero">
       <p class="eyebrow">Portfolio</p>
-      <h1>Building practical AI systems from an operations base.</h1>
-      <p class="lead">I come from IT service desk and technical operations. My edge is not deep-model research. It is understanding repeated workflow pain, messy information, support handoffs, and where automation or AI can make a real team more effective without creating new risk.</p>
+      <h1>Building practical AI systems from a service desk and operations base.</h1>
+      <p class="lead">I come from IT service desk and technical operations. My edge is not deep-model research. It is understanding repeated workflow pain, messy information, support handoffs, permissions, dashboards, and where automation or AI can make a real team more effective without creating new risk.</p>
       <div class="button-row">
         <a class="button" href="https://www.linkedin.com/in/adam-t-724315133/">View LinkedIn</a>
         <a class="button secondary" href="https://github.com/after-magic">View GitHub</a>
@@ -205,7 +75,21 @@
       <div class="highlights">
         <div class="highlight"><strong>Current base</strong>Service desk, technical operations, regulated environments, incident handling, permissions, support knowledge.</div>
         <div class="highlight"><strong>Automation path</strong>Power Automate, Power Query, PowerShell, structured reporting, workflow design, manual-work reduction.</div>
-        <div class="highlight"><strong>AI direction</strong>LLM-assisted knowledge systems, grounding, information reuse, documentation flows, operational AI adoption.</div>
+        <div class="highlight"><strong>AI direction</strong>LLM-assisted knowledge systems, grounding, information reuse, documentation flows, and governed operational AI adoption.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <h2 class="section-title">Selected Evidence</h2>
+        <p class="sublead">The strongest story is not generic AI enthusiasm. It is a support and operations background with real workload, real customer impact, and a clear move into automation and knowledge systems.</p>
+        <div class="stat-grid">
+          <div class="stat"><div class="value">6,723</div><div>Incidents opened in preserved service desk reporting between 2023-01-13 and 2026-06-11.</div></div>
+          <div class="stat"><div class="value">8,083</div><div>Incidents where I was listed as resolver in the supplied reporting dataset.</div></div>
+          <div class="stat"><div class="value">4.70 / 5</div><div>Average customer satisfaction in the supplied service desk dashboard evidence.</div></div>
+          <div class="stat"><div class="value">4.70 / 5</div><div>Average customer effort in the same dashboard evidence.</div></div>
+        </div>
+        <p class="sublead" style="margin-top:18px;">I also completed three Microsoft AI Skills Fest playlists and received the AI Skills Fest badge plus a 100% certification exam voucher. I describe that as learning evidence, not as a completed Microsoft certification.</p>
       </div>
     </section>
 
@@ -215,26 +99,26 @@
         <p class="sublead">These are the strongest public-safe examples of the kind of work I want to do more of: AI automation, knowledge systems, workflow engineering, and operational improvement grounded in real use cases.</p>
         <div class="project-grid">
           <article class="project">
-            <span class="label">Knowledge System</span>
+            <span class="label">Knowledge Engineering</span>
             <h3>Personal Second Brain / LLM Wiki</h3>
             <p class="meta">A local knowledge system that keeps raw source material separate from compiled knowledge.</p>
             <ul>
-              <li><strong>Problem:</strong> useful information gets trapped in one-off chats, notes, and transcripts.</li>
+              <li><strong>Problem:</strong> useful information gets trapped in one-off chats, notes, screenshots, and transcripts.</li>
               <li><strong>Build:</strong> a Markdown-based system with source summaries, project pages, indexing, provenance links, and an append-only operations log.</li>
-              <li><strong>Why it matters:</strong> shows practical experience in grounding, structure, documentation quality, and information reuse.</li>
-              <li><strong>Tools:</strong> local LLM workflows, Markdown, Git-style thinking, source preservation.</li>
+              <li><strong>Why it matters:</strong> demonstrates grounding, structure, documentation quality, tool use, and information reuse.</li>
+              <li><strong>Relevant pattern:</strong> a working example of AI-assisted knowledge engineering rather than a one-off prompt demo.</li>
             </ul>
           </article>
 
           <article class="project">
-            <span class="label">Microsoft 365 Workflow</span>
-            <h3>Service Desk Knowledge Workflow</h3>
-            <p class="meta">A SharePoint-based concept for turning repeated support issues into reviewed, reusable knowledge.</p>
+            <span class="label">Microsoft 365 / SharePoint</span>
+            <h3>Service Desk Knowledge Workflow Proposal</h3>
+            <p class="meta">A SharePoint and Copilot-style concept for turning repeated support issues into reviewed, reusable knowledge.</p>
             <ul>
               <li><strong>Problem:</strong> troubleshooting knowledge is often repeated, hard to find, or stuck in ticket history.</li>
-              <li><strong>Build:</strong> a workflow using structured handoff records, SharePoint organisation, review queues, and Copilot-style grounding ideas.</li>
-              <li><strong>Guardrails:</strong> human review, governed knowledge sources, and operational fit for a real workplace environment.</li>
-              <li><strong>Tools:</strong> Microsoft 365, SharePoint, workflow design, service desk process thinking.</li>
+              <li><strong>Build:</strong> a workflow using structured handoff records, SharePoint organisation, review queues, curator-agent concepts, and human approval.</li>
+              <li><strong>Guardrails:</strong> governed knowledge sources, sanitised handoffs, review before publication, and knowledge-health checks.</li>
+              <li><strong>Why it matters:</strong> shows how I think about AI systems inside a real workplace, not just in personal experiments.</li>
             </ul>
           </article>
 
@@ -244,9 +128,19 @@
             <p class="meta">Repeatable workflows for turning messy source material into structured, usable outputs.</p>
             <ul>
               <li><strong>Problem:</strong> notes, transcripts, and source material are usually time-consuming to clean and reuse.</li>
-              <li><strong>Build:</strong> automation patterns that extract summaries, actions, links, and reusable knowledge blocks.</li>
+              <li><strong>Build:</strong> automation patterns that extract summaries, actions, links, timestamps, and reusable knowledge blocks.</li>
               <li><strong>Result:</strong> clearer outputs, better follow-up, and less repeated manual formatting.</li>
-              <li><strong>Tools:</strong> prompt design, structured extraction, documentation workflows, operational review.</li>
+              <li><strong>Why it matters:</strong> combines prompt design, structure, and operational usefulness in a practical workflow.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <span class="label">Workflow Improvement</span>
+            <h3>Automation and Dashboard Workflows</h3>
+            <p class="meta">Practical workflow concepts using reporting, automation, and structured review flows.</p>
+            <ul>
+              <li><strong>Build:</strong> Power Automate, Power Query, Excel, Google Sheets, and structured data capture patterns for operational visibility and process improvement.</li>
+              <li><strong>Context:</strong> this sits between support operations and AI engineering because useful automation depends on reliable inputs, review, and usable outputs.</li>
             </ul>
           </article>
         </div>
@@ -266,9 +160,11 @@
             <span class="pill">Power Automate</span>
             <span class="pill">Power Query</span>
             <span class="pill">PowerShell</span>
+            <span class="pill">Microsoft 365</span>
             <span class="pill">SharePoint workflow design</span>
             <span class="pill">Knowledge reuse</span>
             <span class="pill">Documentation systems</span>
+            <span class="pill">Operational reporting</span>
           </div>
         </div>
         <div>
@@ -279,6 +175,7 @@
             <li>Integration or support engineering roles</li>
             <li>Operationally grounded AI application roles</li>
           </ol>
+          <p class="sublead" style="margin-top:16px;">My strongest positioning is AI automation and knowledge systems from an IT operations base, not pure research ML.</p>
         </div>
       </div>
     </section>
@@ -286,11 +183,11 @@
     <section class="section">
       <div class="panel">
         <h2 class="section-title">Where This Is Going</h2>
-        <p class="sublead">This portfolio is intentionally early but focused. The next additions should be compact case studies with screenshots, architecture notes, and clearer before-and-after outcomes.</p>
+        <p class="sublead">This portfolio is intentionally early but now grounded in actual project and work evidence. The next additions should turn the strongest projects into cleaner public case studies.</p>
         <ul>
-          <li>Add screenshots or diagrams for the three featured projects.</li>
-          <li>Write one short case study per project with problem, build, guardrails, and result.</li>
-          <li>Add a public-safe CV download or application page once the final one-page CVs are ready.</li>
+          <li>Add screenshots or diagrams for the featured projects.</li>
+          <li>Write one compact public case study per project with problem, build, guardrails, result, and next improvement.</li>
+          <li>Add a public-safe one-page CV download or application page once the final one-page CVs are ready.</li>
         </ul>
       </div>
     </section>
