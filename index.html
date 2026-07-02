@@ -4,117 +4,298 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Adam Tregale | AI Automation and Knowledge Systems</title>
+  <meta name="description" content="Portfolio for Adam Tregale, focused on AI automation, knowledge systems, workflow engineering, and practical operational improvement.">
   <style>
     :root {
-      --bg: #f4f1ea;
-      --paper: #fffdf8;
-      --ink: #1a1a17;
-      --muted: #5f5a52;
-      --line: #d7cfbf;
+      --bg: #f3efe6;
+      --panel: #fffdf8;
+      --ink: #1b1a17;
+      --muted: #5e584f;
+      --line: #d7cdb9;
       --accent: #0d5c63;
-      --accent-2: #c97b63;
+      --accent-2: #bf6c52;
+      --accent-3: #dcc8a4;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Georgia, 'Times New Roman', serif;
-      background: linear-gradient(180deg, #efe8dc 0%, var(--bg) 100%);
       color: var(--ink);
-      line-height: 1.5;
+      background:
+        radial-gradient(circle at top left, rgba(191,108,82,0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(13,92,99,0.10), transparent 28%),
+        linear-gradient(180deg, #efe7da 0%, var(--bg) 100%);
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.55;
     }
+    a { color: var(--accent); }
     .wrap {
-      max-width: 920px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 48px 20px 80px;
+      padding: 28px 20px 84px;
     }
-    .hero {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      padding: 32px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-    }
-    h1, h2, h3 { margin: 0 0 12px; }
-    h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 0.95; letter-spacing: -0.03em; }
-    .kicker { color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.82rem; margin-bottom: 16px; }
-    .lead { font-size: 1.15rem; max-width: 700px; color: var(--muted); }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       gap: 16px;
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .topbar a { text-decoration: none; }
+    .hero {
+      background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,253,248,0.96));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(13,92,99,0.12), transparent 68%);
+      pointer-events: none;
+    }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 7vw, 5.1rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      max-width: 820px;
+    }
+    .lead {
+      max-width: 760px;
+      margin: 20px 0 0;
+      font-size: 1.17rem;
+      color: var(--muted);
+    }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
       margin-top: 28px;
     }
-    .card {
-      background: rgba(255,255,255,0.7);
-      border: 1px solid var(--line);
-      padding: 18px;
-    }
-    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
     .button {
-      display: inline-block;
-      padding: 10px 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 16px;
       border: 1px solid var(--accent);
       color: var(--accent);
       text-decoration: none;
+      background: white;
       font-weight: 600;
-      background: #fff;
+      min-width: 140px;
     }
-    section { margin-top: 28px; }
-    .section-box {
-      background: var(--paper);
+    .button.secondary {
+      border-color: var(--line);
+      color: var(--ink);
+    }
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .highlight {
       border: 1px solid var(--line);
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      background: rgba(255,255,255,0.7);
+      padding: 18px;
     }
-    ul { padding-left: 20px; margin: 12px 0 0; }
-    li { margin: 8px 0; }
-    a { color: var(--accent); }
-    .footer-note { margin-top: 14px; color: var(--muted); font-size: 0.95rem; }
+    .highlight strong { display: block; margin-bottom: 6px; }
+    .section { margin-top: 28px; }
+    .panel {
+      background: rgba(255,253,248,0.98);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.04);
+      padding: 30px;
+    }
+    .section-title {
+      margin: 0 0 16px;
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+    }
+    .sublead {
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 760px;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .project {
+      border: 1px solid var(--line);
+      padding: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(251,247,240,0.95));
+    }
+    .project h3 { margin: 0 0 10px; font-size: 1.22rem; }
+    .label {
+      display: inline-block;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .meta { color: var(--muted); font-size: 0.95rem; }
+    .project ul { padding-left: 18px; margin: 12px 0 0; }
+    .project li { margin: 8px 0; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      padding: 8px 12px;
+      background: white;
+      font-size: 0.95rem;
+    }
+    .timeline { margin: 0; padding-left: 18px; }
+    .timeline li { margin: 10px 0; }
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+    @media (max-width: 760px) {
+      .hero, .panel { padding: 22px; }
+      .two-col { grid-template-columns: 1fr; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="hero">
-      <div class="kicker">Adam Tregale</div>
-      <h1>AI Automation, Knowledge Systems, and Workflow Engineering</h1>
-      <p class="lead">I come from IT service desk and technical operations, and I am building toward practical AI work that improves how teams capture knowledge, reduce manual work, and solve repeated operational problems.</p>
-      <div class="links">
-        <a class="button" href="https://www.linkedin.com/in/adam-t-724315133?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a>
-        <a class="button" href="https://github.com/after-magic">GitHub</a>
-      </div>
-      <div class="grid">
-        <div class="card"><strong>Current base</strong><br>Service desk, technical operations, regulated environments, support workflows.</div>
-        <div class="card"><strong>Automation path</strong><br>Power Automate, Power Query, PowerShell, structured data workflows.</div>
-        <div class="card"><strong>AI direction</strong><br>LLM-assisted knowledge systems, documentation reuse, workflow design, grounded automation.</div>
-      </div>
+    <div class="topbar">
+      <div>Adam Tregale · Exeter, Devon · AI automation and workflow engineering</div>
+      <div><a href="https://www.linkedin.com/in/adam-t-724315133/">LinkedIn</a> · <a href="https://github.com/after-magic">GitHub</a></div>
     </div>
 
-    <section class="section-box">
-      <h2>Featured Projects</h2>
-      <h3>Personal Second Brain / LLM Wiki</h3>
-      <p>A local LLM-assisted knowledge system that separates raw sources from compiled knowledge and uses indexing, provenance, and operational logging to improve information quality and reuse.</p>
-      <h3>Microsoft 365 Service Desk Knowledge Workflow</h3>
-      <p>A SharePoint-based service desk workflow designed to turn repeated troubleshooting patterns into reusable, reviewed support knowledge with structured handoffs and human oversight.</p>
-      <h3>Meeting Notes and Content Ingest Automation</h3>
-      <p>Repeatable automation flows that convert notes, transcripts, and source material into structured summaries, actions, and reusable outputs.</p>
+    <section class="hero">
+      <p class="eyebrow">Portfolio</p>
+      <h1>Building practical AI systems from an operations base.</h1>
+      <p class="lead">I come from IT service desk and technical operations. My edge is not deep-model research. It is understanding repeated workflow pain, messy information, support handoffs, and where automation or AI can make a real team more effective without creating new risk.</p>
+      <div class="button-row">
+        <a class="button" href="https://www.linkedin.com/in/adam-t-724315133/">View LinkedIn</a>
+        <a class="button secondary" href="https://github.com/after-magic">View GitHub</a>
+      </div>
+      <div class="highlights">
+        <div class="highlight"><strong>Current base</strong>Service desk, technical operations, regulated environments, incident handling, permissions, support knowledge.</div>
+        <div class="highlight"><strong>Automation path</strong>Power Automate, Power Query, PowerShell, structured reporting, workflow design, manual-work reduction.</div>
+        <div class="highlight"><strong>AI direction</strong>LLM-assisted knowledge systems, grounding, information reuse, documentation flows, operational AI adoption.</div>
+      </div>
     </section>
 
-    <section class="section-box">
-      <h2>What I Bring</h2>
-      <ul>
-        <li>Technical support and incident investigation</li>
-        <li>Workflow automation and manual-work reduction</li>
-        <li>ServiceNow and enterprise data handling</li>
-        <li>Power Automate, Power Query, Excel, OneDrive</li>
-        <li>PowerShell and lightweight scripting</li>
-        <li>Documentation and knowledge reuse</li>
-      </ul>
+    <section class="section">
+      <div class="panel">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="sublead">These are the strongest public-safe examples of the kind of work I want to do more of: AI automation, knowledge systems, workflow engineering, and operational improvement grounded in real use cases.</p>
+        <div class="project-grid">
+          <article class="project">
+            <span class="label">Knowledge System</span>
+            <h3>Personal Second Brain / LLM Wiki</h3>
+            <p class="meta">A local knowledge system that keeps raw source material separate from compiled knowledge.</p>
+            <ul>
+              <li><strong>Problem:</strong> useful information gets trapped in one-off chats, notes, and transcripts.</li>
+              <li><strong>Build:</strong> a Markdown-based system with source summaries, project pages, indexing, provenance links, and an append-only operations log.</li>
+              <li><strong>Why it matters:</strong> shows practical experience in grounding, structure, documentation quality, and information reuse.</li>
+              <li><strong>Tools:</strong> local LLM workflows, Markdown, Git-style thinking, source preservation.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <span class="label">Microsoft 365 Workflow</span>
+            <h3>Service Desk Knowledge Workflow</h3>
+            <p class="meta">A SharePoint-based concept for turning repeated support issues into reviewed, reusable knowledge.</p>
+            <ul>
+              <li><strong>Problem:</strong> troubleshooting knowledge is often repeated, hard to find, or stuck in ticket history.</li>
+              <li><strong>Build:</strong> a workflow using structured handoff records, SharePoint organisation, review queues, and Copilot-style grounding ideas.</li>
+              <li><strong>Guardrails:</strong> human review, governed knowledge sources, and operational fit for a real workplace environment.</li>
+              <li><strong>Tools:</strong> Microsoft 365, SharePoint, workflow design, service desk process thinking.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <span class="label">Automation</span>
+            <h3>Meeting Notes and Content Ingest Automation</h3>
+            <p class="meta">Repeatable workflows for turning messy source material into structured, usable outputs.</p>
+            <ul>
+              <li><strong>Problem:</strong> notes, transcripts, and source material are usually time-consuming to clean and reuse.</li>
+              <li><strong>Build:</strong> automation patterns that extract summaries, actions, links, and reusable knowledge blocks.</li>
+              <li><strong>Result:</strong> clearer outputs, better follow-up, and less repeated manual formatting.</li>
+              <li><strong>Tools:</strong> prompt design, structured extraction, documentation workflows, operational review.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="section-box">
-      <h2>Next Step</h2>
-      <p>This site is the starting point for a public portfolio built around practical AI automation and operational knowledge systems. The next additions should be short case studies with screenshots, architecture notes, and outcomes.</p>
-      <p class="footer-note">The fastest way to strengthen this portfolio now is to add 2 to 3 project case studies with problem, build, tools, guardrails, and outcome.</p>
+    <section class="section">
+      <div class="panel two-col">
+        <div>
+          <h2 class="section-title">What I Bring</h2>
+          <p class="sublead">My background is strongest where operations, support, documentation, and automation overlap.</p>
+          <div class="pill-list">
+            <span class="pill">Technical support</span>
+            <span class="pill">Incident investigation</span>
+            <span class="pill">Workflow automation</span>
+            <span class="pill">ServiceNow data handling</span>
+            <span class="pill">Power Automate</span>
+            <span class="pill">Power Query</span>
+            <span class="pill">PowerShell</span>
+            <span class="pill">SharePoint workflow design</span>
+            <span class="pill">Knowledge reuse</span>
+            <span class="pill">Documentation systems</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="section-title">Best Fit Roles</h2>
+          <ol class="timeline">
+            <li>AI automation and workflow roles</li>
+            <li>Knowledge systems and AI enablement roles</li>
+            <li>Integration or support engineering roles</li>
+            <li>Operationally grounded AI application roles</li>
+          </ol>
+        </div>
+      </div>
     </section>
+
+    <section class="section">
+      <div class="panel">
+        <h2 class="section-title">Where This Is Going</h2>
+        <p class="sublead">This portfolio is intentionally early but focused. The next additions should be compact case studies with screenshots, architecture notes, and clearer before-and-after outcomes.</p>
+        <ul>
+          <li>Add screenshots or diagrams for the three featured projects.</li>
+          <li>Write one short case study per project with problem, build, guardrails, and result.</li>
+          <li>Add a public-safe CV download or application page once the final one-page CVs are ready.</li>
+        </ul>
+      </div>
+    </section>
+
+    <p class="footer">Built to show practical AI automation, knowledge systems, and workflow engineering from a service desk and technical operations base.</p>
   </div>
 </body>
 </html>
