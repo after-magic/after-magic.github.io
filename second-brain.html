@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Second Brain / LLM Wiki</title>
+  <meta name="description" content="A local LLM-assisted knowledge system built to preserve raw sources, compound useful knowledge over time, and turn one-off chats or notes into structured, reusable information.">
+
+  <style>
+    :root {
+      --bg: #f3efe6;
+      --panel: #fffdf8;
+      --ink: #1b1a17;
+      --muted: #5e584f;
+      --line: #d7cdb9;
+      --accent: #0d5c63;
+      --accent-2: #bf6c52;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: radial-gradient(circle at top left, rgba(191,108,82,0.12), transparent 32%), radial-gradient(circle at top right, rgba(13,92,99,0.10), transparent 28%), linear-gradient(180deg, #efe7da 0%, var(--bg) 100%); font-family: Georgia, 'Times New Roman', serif; line-height: 1.62; }
+    a { color: var(--accent); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 28px 20px 84px; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:22px; color:var(--muted); font-size:0.95rem; }
+    .topbar a { text-decoration:none; }
+    .panel { background: rgba(255,253,248,0.98); border: 1px solid var(--line); box-shadow: var(--shadow); padding: 30px; }
+    .eyebrow { margin:0 0 14px; color:var(--accent); text-transform:uppercase; letter-spacing:0.16em; font-size:0.78rem; }
+    h1 { margin:0 0 16px; font-size: clamp(2.2rem, 6vw, 4.4rem); line-height:0.94; letter-spacing:-0.04em; }
+    h2 { margin: 28px 0 12px; font-size: 1.45rem; letter-spacing:-0.02em; }
+    p, li { color: var(--ink); }
+    .lead { font-size:1.15rem; color:var(--muted); max-width:760px; }
+    .meta { display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:12px; margin-top:20px; }
+    .meta-card { border:1px solid var(--line); background:white; padding:14px; }
+    .section { margin-top: 24px; }
+    .section p { margin: 0 0 12px; }
+    ul { padding-left: 20px; }
+    li { margin: 8px 0; }
+    .nav-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; border:1px solid var(--accent); color:var(--accent); text-decoration:none; background:white; font-weight:600; }
+    .button.secondary { border-color:var(--line); color:var(--ink); }
+    .footer { margin-top:28px; color:var(--muted); font-size:0.95rem; }
+    @media (max-width:760px) { .topbar { flex-direction:column; align-items:flex-start; } .panel { padding:22px; } }
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div>Adam Tregale · Exeter, Devon · AI automation and workflow engineering</div>
+      <div><a href="/">Home</a> · <a href="https://www.linkedin.com/in/adam-t-724315133/">LinkedIn</a> · <a href="https://github.com/after-magic">GitHub</a></div>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">Case Study</p>
+      <h1>Personal Second Brain / LLM Wiki</h1>
+      <p class="lead">A local LLM-assisted knowledge system built to preserve raw sources, compound useful knowledge over time, and turn one-off chats or notes into structured, reusable information.</p>
+      <div class="meta"><div class='meta-card'><strong>Type</strong><br>Knowledge engineering</div><div class='meta-card'><strong>Core tools</strong><br>Markdown, source summaries, provenance, operational logging</div><div class='meta-card'><strong>Role fit</strong><br>AI automation, knowledge systems, workflow engineering</div></div>
+      <div class="nav-row">
+        <a class="button" href="/">Back to portfolio</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/adam-t-724315133/">LinkedIn</a>
+      </div>
+      <div class='section'><h2>Problem</h2><p>Useful information often gets trapped in one-off chats, screenshots, notes, transcripts, and loosely connected files. That makes it hard to reuse, hard to verify, and easy to lose.</p></div><div class='section'><h2>Build</h2><p>I built a local second-brain system with a clear split between an immutable raw-source layer and an agent-maintained compiled wiki layer. The system uses source summary pages, project pages, concept pages, an index, provenance links, and an append-only operations log so information compounds over time rather than being rediscovered repeatedly.</p></div><div class='section'><h2>Why It Matters</h2><p>This project is one of the strongest examples of my move from support operations into applied AI work. It demonstrates practical grounding, structure, documentation discipline, source handling, and the difference between flashy one-off prompting and durable knowledge engineering.</p></div><div class='section'><h2>What It Shows</h2><ul><li>Turning messy source material into reusable knowledge</li><li>Maintaining provenance and uncertainty rather than overclaiming</li><li>Thinking in systems, not isolated outputs</li><li>Using AI as part of an operational workflow rather than as a novelty layer</li></ul></div><div class='section'><h2>Next Improvement</h2><p>The next public-safe step is to add screenshots of the wiki structure and one or two examples of how a raw source became a durable knowledge page.</p></div>
+      <p class="footer">Public-safe case study based on preserved project notes, CV material, and second-brain documentation.</p>
+    </div>
+  </div>
+</body>
+</html>
