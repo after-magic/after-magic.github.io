@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JR Automations to Ace Studio Operating System</title>
+  <meta name="description" content="A business-first operating system for JR Ace of Fades that evolved from shortcut-based capture into a dashboard-backed review and decision workflow.">
+
+  <style>
+    :root {
+      --bg: #f3efe6;
+      --panel: #fffdf8;
+      --ink: #1b1a17;
+      --muted: #5e584f;
+      --line: #d7cdb9;
+      --accent: #0d5c63;
+      --accent-2: #bf6c52;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: radial-gradient(circle at top left, rgba(191,108,82,0.12), transparent 32%), radial-gradient(circle at top right, rgba(13,92,99,0.10), transparent 28%), linear-gradient(180deg, #efe7da 0%, var(--bg) 100%); font-family: Georgia, 'Times New Roman', serif; line-height: 1.62; }
+    a { color: var(--accent); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 28px 20px 84px; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:22px; color:var(--muted); font-size:0.95rem; }
+    .topbar a { text-decoration:none; }
+    .panel { background: rgba(255,253,248,0.98); border: 1px solid var(--line); box-shadow: var(--shadow); padding: 30px; }
+    .eyebrow { margin:0 0 14px; color:var(--accent); text-transform:uppercase; letter-spacing:0.16em; font-size:0.78rem; }
+    h1 { margin:0 0 16px; font-size: clamp(2.2rem, 6vw, 4.2rem); line-height:0.94; letter-spacing:-0.04em; }
+    h2 { margin: 28px 0 12px; font-size: 1.45rem; letter-spacing:-0.02em; }
+    p, li { color: var(--ink); }
+    .lead { font-size:1.15rem; color:var(--muted); max-width:760px; }
+    .meta { display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:12px; margin-top:20px; }
+    .meta-card { border:1px solid var(--line); background:white; padding:14px; }
+    .section { margin-top: 24px; }
+    .section p { margin: 0 0 12px; }
+    ul { padding-left: 20px; }
+    li { margin: 8px 0; }
+    .nav-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; border:1px solid var(--accent); color:var(--accent); text-decoration:none; background:white; font-weight:600; }
+    .button.secondary { border-color:var(--line); color:var(--ink); }
+    .footer { margin-top:28px; color:var(--muted); font-size:0.95rem; }
+    @media (max-width:760px) { .topbar { flex-direction:column; align-items:flex-start; } .panel { padding:22px; } }
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div>Adam Tregale · Exeter, Devon · AI automation and workflow engineering</div>
+      <div><a href="/">Home</a> · <a href="https://www.linkedin.com/in/adam-t-724315133/">LinkedIn</a> · <a href="https://github.com/after-magic">GitHub</a></div>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">Case Study</p>
+      <h1>JR Automations to Ace Studio Operating System</h1>
+      <p class="lead">A business-first operating layer for JR Ace of Fades that evolved from shortcut-based capture into a dashboard-backed review and decision workflow.</p>
+      <div class="meta"><div class='meta-card'><strong>Type</strong><br>Business system / workflow engineering</div><div class='meta-card'><strong>Core tools</strong><br>Google Sheets, Apple Shortcuts, Apps Script, dashboard design</div><div class='meta-card'><strong>Role fit</strong><br>Automation, operations systems, knowledge and workflow design</div></div>
+      <div class="nav-row">
+        <a class="button" href="/">Back to portfolio</a>
+        <a class="button secondary" href="https://github.com/after-magic">GitHub</a>
+      </div>
+      <div class='section'><h2>Problem</h2><p>Useful business information was spread across memory, notes, app checks, and repeated admin work. Money, chair rent, stock, content ideas, and weekly priorities were easy to lose or delay because there was no simple operating layer that could be used quickly from the phone and reviewed later in one place.</p></div><div class='section'><h2>Business System</h2><p>The project started from a practical business need around JR Ace of Fades and grew into the broader Ace Studio operating system. The point was to create one structure for money tracking, chair-rent logging, stock visibility, content capture, and weekly review, while keeping secondary personal workflows available without letting them take over the core business use case.</p></div><div class='section'><h2>Automation Layer</h2><p>Apple Shortcuts became the capture layer. Repeated actions such as income logging, expense logging, chair rent, stock checks, content ideas, weekly review, and brain dumps were turned into structured input flows. Those Shortcut submissions post JSON into a Google Apps Script web app, which routes records into the correct Google Sheet tabs.</p></div><div class='section'><h2>Dashboard And Decision Layer</h2><p>Google Sheets acts as the durable data layer, while Apps Script provides the review layer. The dashboard was redesigned around a command-centre view with money, stock, weekly priority, recent activity, and public Barbr context. The important technical point is that the reporting layer improved without breaking the existing Shortcut POST contract.</p></div><div class='section'><h2>Why It Matters</h2><p>This is one of the clearest examples of how I work: start with repeated operational friction, build a practical input system, preserve structure, and make the output useful for decisions rather than passive record keeping. It is a stronger workflow-engineering story than a generic automation demo.</p></div><div class='section'><h2>What It Shows</h2><ul><li>Designing across input, storage, processing, and review layers</li><li>Keeping automation grounded in real business use rather than novelty</li><li>Turning scattered admin work into a reusable operating system</li><li>Evolving a rough idea into a clearer dashboard-backed workflow</li></ul></div><div class='section'><h2>Next Improvement</h2><p>The best next step is to add public-safe screenshots or a simple diagram showing one Shortcut flow moving through structured logging into the dashboard. Authenticated booking and earnings integration remains a later phase and is not presented here as already complete.</p></div>
+      <p class="footer">Public-safe case study based on preserved project notes, dashboard outputs, and second-brain documentation.</p>
+    </div>
+  </div>
+</body>
+</html>
